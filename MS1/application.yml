@@ -4,6 +4,9 @@ spring:
   profiles:
     active:
     - default
+  security:
+    user:
+      name: testwithgit
 server:
   port: 0
 eureka:
