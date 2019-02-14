@@ -9,4 +9,4 @@ eureka:
 spring:
   security:
     user:
-      name: DiscNoGit
+      name: DiscWithGit
