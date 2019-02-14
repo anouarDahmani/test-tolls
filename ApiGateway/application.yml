@@ -14,6 +14,9 @@ spring:
   profiles:
     active:
     - default
+  security:
+    user:
+      name: gateNoGit
 eureka:
   client:
     serviceUrl:
