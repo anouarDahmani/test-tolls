@@ -16,7 +16,7 @@ spring:
     - default
   security:
     user:
-      name: gateNoGit
+      name: gateWithGit
 eureka:
   client:
     serviceUrl:
