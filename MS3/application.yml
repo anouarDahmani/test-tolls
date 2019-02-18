@@ -6,7 +6,7 @@ spring:
     - default
   security:
     user:
-      name: ms3NoGit
+      name: ms3WithGit
   cloud:
     config:
       uri: 
