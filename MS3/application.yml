@@ -1,12 +1,27 @@
 spring:
   application:
-    name: ms2
+    name: ms3
   profiles:
     active:
     - default
   security:
     user:
-      name: ms3WithGit
+      name: ms3NoGit
+  cloud:
+    config:
+      uri: 
+      - http://localhost:8888/
+  datasource:
+    url: jdbc:mysql://localhost/test
+    username: root
+    password: 
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        current_session_context_class: org.springframework.orm.hibernate4.SpringSessionContext
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
 server:
   port: 0
 eureka:
