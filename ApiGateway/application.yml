@@ -1,0 +1,45 @@
+zuul:
+  routes:
+    ms1:
+      path: /ms1/**
+      service-id: ms1
+    ms2:
+      path: /ms2/**
+      service-id: ms2
+    user:
+      path: /user/**
+      service-id: userservice
+    mail:
+      path: /mail/**
+      service-id: mailservice
+    music:
+      path: /music/**
+      service-id: musicservice
+    auth:
+      path: /auth/**
+      service-id: authenticationservice
+      strip-prefix: false
+      sensitive-headers:
+      - Cookie
+      - Set-Cookie
+server:
+  port: 8080
+spring:
+  application:
+    name: ApiGateway
+  profiles:
+    active:
+    - default
+  security:
+    user:
+      name: gateNoGit
+  cloud:
+    config:
+      uri:
+      - http://localhost:8888/
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: true
